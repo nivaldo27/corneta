@@ -1,0 +1,119 @@
+body {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #234625;
+}
+.sonar {
+    position: relative;
+    height: 23em;
+    width: 23em;
+}
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #5ab65b;
+}
+.circle.one {
+    position: absolute;
+    height: calc(23em - 2px);
+    width: calc(23em - 2px);
+    background: #234625;
+}
+.circle.two {
+    height: 17em;
+    width: 17em;
+}
+.circle.three {
+    height: 11em;
+    width: 11em;
+}
+.circle.four {
+    height: 6em;
+    width: 6em;
+}
+.circle.five {
+    height: 1em;
+    width: 1em;
+}
+.cursor {
+    position: absolute;
+    height: 23em;
+    width: 23em;
+    border-radius: 50%;
+    background: conic-gradient(
+        from 40deg,
+        #4d8d50 1deg,
+        #61ac63 15deg,
+        #7ee07f 25deg,
+        #8af58b 29deg,
+        transparent 29deg
+    );
+    opacity: 0.8;
+    animation: detection 2s linear infinite;
+}
+.container {
+    position: relative;
+    height: 23em;
+    width: 23em;
+}
+.saquare {
+    height: 2.5em;
+    width: 2.5em;
+    border: 1px solid #c6cec5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.saquare.one {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+}
+.saquare.two {
+    position: absolute;
+    top: 25%;
+    right: 20%;
+}
+.saquare.three {
+    position: absolute;
+    bottom: 15%;
+    right: 20%;
+}
+.saquare.four {
+    position: absolute;
+    bottom: 20%;
+    left: 15%;
+}
+.ally, .enemy {
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    filter: blur(4px);
+}
+.ally {
+    background: radial-gradient(
+        #5bbe5e 50%,
+        #47914a 60%,
+        transparent 65%
+    );
+}
+.enemy {
+    background: radial-gradient(
+        #be371d 50%,
+        #893c1f 60%,
+        transparent 65%
+    );
+}
+@keyframes detection {
+    from {
+        rotate: 0turn;
+    }
+    to {
+        rotate: 1turn;
+    }
+}
